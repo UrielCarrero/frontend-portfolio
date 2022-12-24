@@ -1,0 +1,10 @@
+.contactme__container {
+    background-color: black;
+    color: white;
+    padding: 3%;
+    padding-bottom: 100px;
+}
+
+.contactme__container > h3{
+    color: white;
+}

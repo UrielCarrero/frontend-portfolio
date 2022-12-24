@@ -1,0 +1,98 @@
+.card__container{
+    background-color: black;
+    color: white;
+    padding: 2%;
+    border-radius: 2%;
+    overflow: hidden;
+    outline: white solid 1px;
+    height: 100%;
+    position: relative;
+}
+
+
+
+.screenshot__container{
+    height: auto;
+    width: 100%;
+}
+
+.screenshot__container > img{
+    height: 100%;
+    width: 100%;
+    border-radius: 2%;
+    overflow: hidden;
+}
+
+.slick-dots>li>button{
+    color: transparent;
+    background-color: rgb(91, 91, 91);
+    font-size: 1px;
+    margin:1px;
+}
+
+.slick-dots>li{
+    display:inline-block;
+}
+
+.slick-dots>li::maker{
+    visibility: hidden;
+    opacity: 0;
+}
+
+.slick-active>button{
+    background-color: white !important;
+}
+
+.content__card{
+    padding: 5px;
+}
+
+.content__card>h3{
+    text-align: center;
+}
+
+
+.card__description{
+    text-align: justify;
+    font-size: 1rem;
+}
+
+.read__more{
+    color: rgb(48, 167, 252);
+}
+
+.read__more:hover{
+    cursor: pointer;
+}
+
+.card__buttons{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.card__buttons>button{
+    font-size: 1vw;
+    background-color:transparent;
+    color: white;
+}
+
+.cardbtn__icon{
+    font-size: 3vw;
+    background-color:transparent;
+    color: white;
+}
+
+@media screen and (max-width: 767px){
+    .card__container{
+        max-width: 70%;
+    }
+
+    .card__buttons>button{
+        font-size: 2vw;
+    }
+
+    .cardbtn__icon{
+        font-size: 6vw;
+    }
+}

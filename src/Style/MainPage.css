@@ -1,0 +1,185 @@
+/*
+    amarillo=#F7CE3E
+    negro=#0A1612
+    gris=#C5C1C0
+    azul=#1A2930
+*/
+
+.nav__maincontainer{
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    transition: opacity linear 0.5s;
+}
+
+.navbar__hide{
+    opacity: 0;
+}
+
+.navbar__hide:hover{
+    opacity: 1;
+}
+
+.navbar__show{
+    opacity: 1;
+}
+
+.about__container{
+    background-color: black;
+    color: white;
+    padding: 3%;
+    padding-top: 60px;
+}
+
+.about__description > p{
+    text-align: justify;
+    padding: 1% 1%;
+}
+
+.download__button{
+    background-color: transparent;
+    color: white;
+}
+
+.proyect__container{
+    background-color: black;
+    color: white;
+    padding: 3%;
+    padding-top: 60px;
+}
+
+.cardsproject__container{
+    background-color: transparent;
+    margin: 0 !important;
+    display: flex;
+    justify-content: center;
+}
+
+.individualcard__container{
+    justify-content: center;
+    margin-top: 2% !important;
+    margin-bottom: 2% !important;
+}
+
+.main__popup{
+    margin-right: 1px;
+    white-space: nowrap;
+    position: fixed;
+    z-index: 90;
+    right: 0;
+    background-color: rgb(75, 74, 74);
+    color: white;
+    padding: 15px 50px 15px 20px;
+    font-size: 500;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: transform linear 0.25s;
+    width: max-content !important;
+}
+
+.hide__mainpopup{
+    transform: translateX(275px);
+}
+
+.show__mainpopup{
+    transform: translateX(0px);
+}
+
+.check__message{
+    padding: 2% 2%;
+    border-radius: 50%;
+    outline: green 3px solid;
+    color: green;
+    margin-right: 6%;
+}
+
+.error__message{
+    font-size: 1rem;
+    padding: 2% 5%;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+    margin-right: 6%;
+}
+
+.close__popup{
+    font-size: 1rem;
+    padding: 3% 3%;
+    border-radius: 50%;
+    margin-left: 10px;
+    color: white;
+    background-color: black;
+    margin-right: 6%;
+    margin-top: 6px;
+}
+
+.close__popup:hover{
+    cursor: pointer;
+}
+
+.skills__containers{
+    display: inline-block;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.icon__name{
+    font-size: 1.3rem;
+}
+
+.skills__icon{
+    background-color: aqua;
+    color: black;
+    outline: aqua 1px solid;
+}
+
+.rest__icon{
+    width: 3rem;
+}
+
+.icon__container{
+    display: inline-block;
+    margin: 5px 25px;
+    max-width: 4.5rem;
+}
+
+.icon__container>div{
+    display: flex;
+    justify-content: center;
+    overflow-wrap: break-word;
+    text-align: center;
+}
+
+.icon__name{
+    font-size: 1.3rem;
+}
+
+.contactme__maincontainer{
+    padding-top: 10px;
+    background-color: black;
+}
+
+@media screen and (max-width: 1650px){
+    .icon__name{
+        font-size: 1.3vw;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .skills__containers{
+        display: block;
+        justify-content: space-between;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar__hide{
+    opacity: 1 !important;
+    }
+}
+
+@media screen and (max-width: 760px){
+    .individualcard__container{
+        display: flex;
+        justify-content: center;
+    }
+}
