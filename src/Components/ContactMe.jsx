@@ -13,7 +13,8 @@ export const ContactMe = ({language, changeSuccessfullySent}) => {
 
     const sendEmail = (e) => {
         e.preventDefault();
-        emailjs.sendForm('service_wwet4d4', 
+        changeSuccessfullySent("Envio Exitoso", "successfull")
+        /*emailjs.sendForm('service_wwet4d4', 
         'template_e8d24qm', 
         form.current, 
         '8BUj3XQ8QgiN5leNt')
@@ -33,7 +34,7 @@ export const ContactMe = ({language, changeSuccessfullySent}) => {
                 else
                     changeSuccessfullySent("Error, Try it Again", "failed")
                 console.log(error.text);
-            });
+            });*/
     }
 
     const handleChange = (e) => {
@@ -61,15 +62,15 @@ export const ContactMe = ({language, changeSuccessfullySent}) => {
             <form ref={form} onSubmit={sendEmail}>
                 <div>
                     <label>{language==="Español"?"Nombre : ":"Your Name : "}</label>
-                    <input onChange={(e)=>handleChange(e)} type="text" name="user_name"  value={formInputs.name}/>
+                    <input onChange={(e)=>handleChange(e)} type="text" name="user_name"  value={formInputs.name} required/>
                 </div>
                 <div>
                     <label>{language==="Español"?"Correo Electronico : ":"Your Email : "}</label>
-                    <input onChange={(e)=>handleChange(e)} type="email" name="user_email"  value={formInputs.email}/>
+                    <input onChange={(e)=>handleChange(e)} type="email" name="user_email"  value={formInputs.email} required/>
                 </div>
                 <div>
                     <label>{language==="Español"?"Mensaje : ":"Message : "}</label>
-                    <textarea onChange={(e)=>handleChange(e)} name="message" value={formInputs.message}/>
+                    <textarea onChange={(e)=>handleChange(e)} name="message" value={formInputs.message} required/>
                 </div>
                 <div>
                     <input type="submit" value={language==="Español"?"Enviar":"Send"} />

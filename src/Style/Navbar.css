@@ -1,10 +1,11 @@
 .navbar__container{
-    background-color: black;
+    background-color: #0A1612;
     color: white;
     display: flex;
     justify-content: space-around;
     padding-top: 10px;
     padding-bottom: 10px;
+    border-bottom: #F7CE3E solid 5px;
 }
 
 .navbar__text{
@@ -52,7 +53,7 @@
     position: absolute;
     color: white;
     font-size: 1.2rem;
-    background-color: black;
+    background-color: #0A1612;
     opacity:0;
     transition: opacity linear 0.7s, z-index linear 0.7s;
     width: 100%;
@@ -104,7 +105,8 @@
 }
 
 .options__container>div:hover{
-    background-color: rgb(91, 91, 91);
+    background-color: #C5C1C0;
+    color:#0A1612;
 }
 
 .navbar__menu{
@@ -151,7 +153,7 @@
     .nav__options{
         display: block;
         position: absolute;
-        background-color: black;
+        background-color: #0A1612;
         color: #F7CE3E;
         opacity: 0;
         transition: opacity linear 0.5s, z-index linear 0.5s, visibility linear 0.5s;
@@ -171,8 +173,7 @@
     }
 
     .nav__options>div:hover{
-
-        background-color: gray;
+        background-color: #C5C1C0;
     }
 
     .show__navmenu{

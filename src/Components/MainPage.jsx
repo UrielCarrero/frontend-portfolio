@@ -6,6 +6,7 @@ import { ContactMe } from "./ContactMe";
 import * as CV from '../Assets/CV Uriel Carrero.pdf'
 import * as Resume from '../Assets/Resume Uriel Carrero.pdf'
 import * as RestIcon from '../Assets/APIREST.png'
+import * as MainImage from '../Assets/Computer3.jpg'
 import { AiOutlineHtml5} from 'react-icons/ai';
 import {SiJavascript, SiJupyter, SiPython, SiRedux, SiVisualstudiocode, SiTypescript} from 'react-icons/si';
 import {DiCss3, DiGit, DiIllustrator, DiPhotoshop} from 'react-icons/di'
@@ -159,6 +160,14 @@ export const MainPage = () => {
         {es:'trabajo en equipo', en:'team player'},
     ]
 
+    const nonProfessionalInterest = [
+        {es:'Dibujo', en:'Drawing'},
+        {es:'Futbol', en:'Soccer'},
+        {es:'Perros', en:'Dogs'},
+        {es:'Viajes', en:'Trips'},
+        {es:'Mindfulness', en:'Mindfulness'},
+    ]
+
     const projects = [
         {
                 title:'Confusion Restaurant',
@@ -200,6 +209,10 @@ export const MainPage = () => {
                 {rightPopUpMessage.icon}
                 {rightPopUpMessage.message}
                 <i onClick={()=>{setDisplayRightPopUp(false)}} className="close__popup ri-close-line"></i>
+        </div>
+
+        <div className="mainimg__container">
+                <img src={MainImage} alt="main image" />
         </div>
         
         <div className="about__container" id="about-me">
@@ -246,6 +259,29 @@ export const MainPage = () => {
                 }
                 </p>
                 <h3>{language==="Español"?"Intereses No Profesionales":"Non-Professional Interests"}</h3>
+                <p>
+                {
+                     language==="Español"?
+                     <ul>
+                        {
+                        nonProfessionalInterest.map((item, index)=>{
+                                return(
+                                        <li key={index}>{item.es}</li>
+                                )
+                        })
+                        }
+                     </ul>:
+                     <ul>
+                        {
+                        nonProfessionalInterest.map((item, index)=>{
+                                return(
+                                        <li key={index}>{item.en}</li>
+                                )
+                        })
+                        }
+                     </ul> 
+                }
+                </p>
         </div>
         
         <div className="proyect__container" id="projects">

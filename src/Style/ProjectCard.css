@@ -1,10 +1,11 @@
 .card__container{
-    background-color: black;
-    color: white;
-    padding: 2%;
+    background-color: #0A1612 ;
+    color: #C5C1C0;
+    padding: 12px;
     border-radius: 2%;
     overflow: hidden;
-    outline: white solid 1px;
+    outline: #0A1612 solid 6px;
+    border: #C5C1C0 solid 3px;
     height: 100%;
     position: relative;
 }
@@ -49,6 +50,7 @@
 
 .content__card>h3{
     text-align: center;
+    color: #F7CE3E;
 }
 
 
@@ -74,18 +76,19 @@
 .card__buttons>button{
     font-size: 1vw;
     background-color:transparent;
-    color: white;
+    color: #C5C1C0;
+    border-color: #C5C1C0;
 }
 
 .cardbtn__icon{
     font-size: 3vw;
     background-color:transparent;
-    color: white;
+    color: #C5C1C0;
 }
 
 @media screen and (max-width: 767px){
     .card__container{
-        max-width: 70%;
+        max-width: 80%;
     }
 
     .card__buttons>button{
@@ -94,5 +97,11 @@
 
     .cardbtn__icon{
         font-size: 6vw;
+    }
+}
+
+@media screen and (max-width: 567px){
+    .card__container{
+        max-width: 95%;
     }
 }

@@ -24,11 +24,34 @@
     opacity: 1;
 }
 
+.mainimg__container{
+    background-image: repeating-linear-gradient(135deg, rgb(209,202,202) 0px, rgb(209,202,202) 16px,rgb(227,224,222) 16px, rgb(227,224,222) 108px,rgb(197,193,193) 108px, rgb(197,193,193) 246px);
+    /*background-image: linear-gradient(90deg, rgb(197,193,192) 0%,transparent 59%),repeating-linear-gradient(45deg, rgba(26,41,48, 0.27) 0px, rgba(26,41,48, 0.27) 5%,transparent 5%, transparent 10%),repeating-linear-gradient(135deg, rgba(26,41,48, 0.27) 0px, rgba(26,41,48, 0.27) 5%,transparent 5%, transparent 10%),linear-gradient(90deg, rgb(197,193,192),rgb(197,193,192));*/
+    background-color: #C5C1C0;
+    width: 100%;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 50px;
+    border-bottom: #F7CE3E 10px solid;
+}
+
+.mainimg__container > img{
+    width: 100%;
+}
+
 .about__container{
-    background-color: black;
-    color: white;
+    background-image: repeating-linear-gradient(135deg, rgb(6,34,51) 0px, rgb(6,34,51) 10%,rgb(9,48,63) 10%, rgb(9,48,63) 68%,rgb(10,22,18) 68%, rgb(10,22,18) 126%);
+    /*background-image: linear-gradient(90deg, rgb(10,22,18) 0%,transparent 59%),repeating-linear-gradient(45deg, rgba(247,206,62, 0.27) 0px, rgba(247,206,62, 0.27) 1px,transparent 1px, transparent 13px),repeating-linear-gradient(135deg, rgba(247,206,62, 0.27) 0px, rgba(247,206,62, 0.27) 1px,transparent 1px, transparent 13px),linear-gradient(90deg, rgb(10,22,18),rgb(10,22,18));*/
+    /*background-image: linear-gradient(112.5deg, rgb(26,41,48) 0%, rgb(26,41,48) 63%,rgb(27,46,57) 63%, rgb(27,46,57) 78%,rgb(48,86,100) 78%, rgb(48,86,100) 80%,rgb(62,107,129) 80%, rgb(62,107,129) 83%,rgb(70,123,147) 83%, rgb(70,123,147) 86%,rgb(134,151,164) 86%, rgb(134,151,164) 96%,rgb(147, 147, 147) 96%, rgb(147, 147, 147) 100%),linear-gradient(90deg, rgb(26,41,48) 0%, rgb(26,41,48) 63%,rgb(27,46,57) 63%, rgb(27,46,57) 78%,rgb(48,86,100) 78%, rgb(48,86,100) 80%,rgb(62,107,129) 80%, rgb(62,107,129) 83%,rgb(70,123,147) 83%, rgb(70,123,147) 86%,rgb(134,151,164) 86%, rgb(134,151,164) 96%,rgb(147, 147, 147) 96%, rgb(147, 147, 147) 100%),linear-gradient(157.5deg, rgb(26,41,48) 0%, rgb(26,41,48) 63%,rgb(27,46,57) 63%, rgb(27,46,57) 78%,rgb(48,86,100) 78%, rgb(48,86,100) 80%,rgb(62,107,129) 80%, rgb(62,107,129) 83%,rgb(70,123,147) 83%, rgb(70,123,147) 86%,rgb(134,151,164) 86%, rgb(134,151,164) 96%,rgb(147, 147, 147) 96%, rgb(147, 147, 147) 100%),linear-gradient(90deg, rgb(202, 202, 202),rgb(187, 187, 187)); background-blend-mode:overlay,overlay,overlay,normal;*/
+    background-color: #1A2930;
+    color: #C5C1C0;
     padding: 3%;
     padding-top: 60px;
+    border-bottom: #F7CE3E 10px solid;
+}
+
+.about__container > h3 {
+    color: #F7CE3E;
 }
 
 .about__description > p{
@@ -38,14 +61,18 @@
 
 .download__button{
     background-color: transparent;
-    color: white;
+    color: #C5C1C0;
+    font-size: 1rem;
+    
 }
 
 .proyect__container{
-    background-color: black;
-    color: white;
+    background-image: repeating-linear-gradient(135deg, rgb(209,202,202) 0px, rgb(209,202,202) 16px,rgb(227,224,222) 16px, rgb(227,224,222) 108px,rgb(197,193,193) 108px, rgb(197,193,193) 246px);
+    background-color: #C5C1C0;
+    color: #223b47;
     padding: 3%;
     padding-top: 60px;
+    border-bottom: #F7CE3E 10px solid;
 }
 
 .cardsproject__container{
@@ -66,6 +93,7 @@
     white-space: nowrap;
     position: fixed;
     z-index: 90;
+    top: 100px;
     right: 0;
     background-color: rgb(75, 74, 74);
     color: white;
@@ -127,10 +155,11 @@
 }
 
 .skills__icon{
-    background-color: aqua;
-    color: black;
-    outline: aqua 1px solid;
+    background-color: transparent;
+    color: #C5C1C0;
+    outline: transparent 1px solid;
 }
+
 
 .rest__icon{
     width: 3rem;
@@ -138,8 +167,13 @@
 
 .icon__container{
     display: inline-block;
-    margin: 5px 25px;
-    max-width: 4.5rem;
+    margin: 15px 25px;
+    width: 4.5rem;
+    transition: transform linear 0.25s;
+}
+
+.icon__container:hover{
+    transform: scale(1.2);
 }
 
 .icon__container>div{
@@ -155,7 +189,7 @@
 
 .contactme__maincontainer{
     padding-top: 10px;
-    background-color: black;
+    background-image: repeating-linear-gradient(135deg, rgb(6,34,51) 0px, rgb(6,34,51) 10%,rgb(9,48,63) 10%, rgb(9,48,63) 68%,rgb(10,22,18) 68%, rgb(10,22,18) 126%);
 }
 
 @media screen and (max-width: 1650px){
@@ -169,11 +203,15 @@
         display: block;
         justify-content: space-between;
         width: 100%;
-        text-align: center;
+        text-align: start;
     }
 
     .navbar__hide{
     opacity: 1 !important;
+    }
+
+    .icon__name{
+        font-size: 2.5vw;
     }
 }
 
@@ -182,4 +220,7 @@
         display: flex;
         justify-content: center;
     }
+
+
 }
+
