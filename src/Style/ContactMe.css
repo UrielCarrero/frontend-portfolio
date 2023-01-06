@@ -8,3 +8,111 @@
 .contactme__container > h3{
     color: #F7CE3E;
 }
+
+.form__contactcontainer{
+    padding-left: 20px;
+}
+
+.inputform__container{
+    border: #C5C1C0 solid 2px;
+    border-radius: 6px;
+    position: relative;
+    padding: 10px;
+    margin-bottom: 5px;
+    margin-top: 15px;
+    width: 65%;
+}
+
+.inputform__name{
+    width: 55%;
+}
+
+.inputform__messsage{
+    width: 80%;
+    height: 175px;
+}
+
+.inputform__container>input, .inputform__container>textarea{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    width: 100%;
+    color: #C5C1C0;
+}
+
+.inputform__container>textarea{
+    height: 100%;
+}
+
+.inputform__container>input:focus, .inputform__container>textarea:focus{
+    background-color: transparent;
+    color: #C5C1C0;
+}
+
+.inputform__container>input:active, .inputform__container>textarea:active{
+    background-color: transparent;
+    color: #C5C1C0;
+}
+
+.inputform__container>input:autofill, .inputform__container>input:-webkit-autofill {
+    background-color: transparent !important;
+    color: #C5C1C0 !important;
+}
+
+.inputform__container>label{
+    color: #b1aeadc5;
+    position: absolute;
+    font-weight: 500;
+    transition: transform linear 0.25s, color linear 0.25s;
+}
+
+.inputform__activecontainer > label {
+    transform: scale(0.85) translateY(-27px) translateX(-15%);
+    background-color: rgb(9,48,63);
+    padding: 0px 3px;
+    color: #C5C1C0;
+}
+
+.messagesend__btn{
+    padding: 5px;
+    margin-top: 15px;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.messagesend__btn:hover{
+    cursor: pointer;
+}
+
+.messagesend__btn, .messagesend__btn>input{
+    background-color: #F7CE3E;
+    color: rgb(9,48,63);
+    border-radius: 5px;
+}
+
+.messagesend__btn>input{
+    border: none;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 500px){
+
+    .inputform__name{
+        width: 90%;
+    }
+
+    .inputform__container{
+        width: 90%;
+    }
+
+    .messagesend__btn{
+        width: 90%;
+    }
+
+    .inputform__container>textarea{
+        width: 90%;
+    }
+}

@@ -1,10 +1,11 @@
 .card__container{
-    background-color: #0A1612 ;
+    background: linear-gradient(0deg, #0A1612 55%, #0d4156 );
+    /*background-color: #0A1612 ;
+    outline: #0A1612 solid 6px;*/
     color: #C5C1C0;
     padding: 12px;
     border-radius: 2%;
     overflow: hidden;
-    outline: #0A1612 solid 6px;
     border: #C5C1C0 solid 3px;
     height: 100%;
     position: relative;
@@ -13,22 +14,22 @@
 
 
 .screenshot__container{
-    height: auto;
     width: 100%;
+    
 }
 
 .screenshot__container > img{
-    height: 100%;
-    width: 100%;
     border-radius: 2%;
     overflow: hidden;
 }
+
 
 .slick-dots>li>button{
     color: transparent;
     background-color: rgb(91, 91, 91);
     font-size: 1px;
     margin:1px;
+    border: none;
 }
 
 .slick-dots>li{
@@ -73,10 +74,15 @@
 
 }
 
-.card__buttons>button{
+.card__buttons>button, .card__buttons>a>button{
     font-size: 1vw;
     background-color:transparent;
     color: #C5C1C0;
+    border-color: transparent;
+    transition: border-color linear 0.25s;
+}
+
+.card__buttons>button:hover, .card__buttons>a>button:hover{
     border-color: #C5C1C0;
 }
 
@@ -91,17 +97,32 @@
         max-width: 80%;
     }
 
-    .card__buttons>button{
-        font-size: 2vw;
+    .card__buttons > button, .card__buttons > a > button{
+        font-size: 1.2rem;
     }
 
     .cardbtn__icon{
-        font-size: 6vw;
+        font-size: 2rem;
     }
 }
 
 @media screen and (max-width: 567px){
+
+    .card__buttons{
+        display: flex;
+        align-items: flex-start;
+    }
+
     .card__container{
         max-width: 95%;
     }
+
+    .card__buttons > button, .card__buttons > a > button{
+        font-size: 0.7rem;
+    }
+
+    .cardbtn__icon{
+        font-size: 1.6rem;
+    }
 }
+

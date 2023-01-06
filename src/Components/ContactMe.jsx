@@ -1,6 +1,7 @@
 import React, {useRef, useState} from 'react';
 import emailjs from '@emailjs/browser';
 import '../Style/ContactMe.css'
+import {RiMailSendFill} from 'react-icons/ri'
 
 export const ContactMe = ({language, changeSuccessfullySent}) => {
 
@@ -10,11 +11,16 @@ export const ContactMe = ({language, changeSuccessfullySent}) => {
                                                     email:"",
                                                     message:""
                                                 })
+    const [inputActive, setInputActive] = useState({
+                                                    name:false,
+                                                    email:false,
+                                                    message:false
+                                                    })
 
     const sendEmail = (e) => {
+
         e.preventDefault();
-        changeSuccessfullySent("Envio Exitoso", "successfull")
-        /*emailjs.sendForm('service_wwet4d4', 
+        emailjs.sendForm('service_wwet4d4', 
         'template_e8d24qm', 
         form.current, 
         '8BUj3XQ8QgiN5leNt')
@@ -34,7 +40,7 @@ export const ContactMe = ({language, changeSuccessfullySent}) => {
                 else
                     changeSuccessfullySent("Error, Try it Again", "failed")
                 console.log(error.text);
-            });*/
+            });
     }
 
     const handleChange = (e) => {
@@ -57,22 +63,44 @@ export const ContactMe = ({language, changeSuccessfullySent}) => {
     <>
     <div className='contactme__container'>
         <h3>{language==="Español"?'Enviame Un Mensaje!':'Send Me a Message!'}</h3>
-        
-        <div className='form__contactcontainer'>
+        <p>Email: urielcarrerocuadrado@gmail.com</p>
+        <div className='col-md-6 col-12 form__contactcontainer'>
             <form ref={form} onSubmit={sendEmail}>
-                <div>
-                    <label>{language==="Español"?"Nombre : ":"Your Name : "}</label>
-                    <input onChange={(e)=>handleChange(e)} type="text" name="user_name"  value={formInputs.name} required/>
+                <div
+                 onClick={()=>setInputActive({...inputActive, name:true})}
+                 onBlur={()=>{
+                    if(formInputs.name===""){
+                        setInputActive({...inputActive, name:false})
+                    }
+                 }}
+                 className={`${inputActive.name?'inputform__activecontainer':''} inputform__name inputform__container`}>
+                    <label htmlFor='user__name'>{language==="Español"?"Nombre":"Your Name"}</label>
+                    <input id="user__name" onChange={(e)=>handleChange(e)} type="text" name="user_name"  value={formInputs.name} required/>
                 </div>
-                <div>
-                    <label>{language==="Español"?"Correo Electronico : ":"Your Email : "}</label>
-                    <input onChange={(e)=>handleChange(e)} type="email" name="user_email"  value={formInputs.email} required/>
+                <div                  
+                onClick={()=>setInputActive({...inputActive, email:true})}
+                 onBlur={()=>{
+                    if(formInputs.email===""){
+                        setInputActive({...inputActive, email:false})
+                    }
+                 }}
+                 className={`${inputActive.email?'inputform__activecontainer':''} inputform__container`}>
+                    <label htmlFor='user__email'>{language==="Español"?"Correo Electronico":"Your Email"}</label>
+                    <input id="user__email" onChange={(e)=>handleChange(e)} type="email" name="user_email"  value={formInputs.email} required/>
                 </div>
-                <div>
-                    <label>{language==="Español"?"Mensaje : ":"Message : "}</label>
-                    <textarea onChange={(e)=>handleChange(e)} name="message" value={formInputs.message} required/>
+                <div 
+                onClick={()=>setInputActive({...inputActive, message:true})}
+                onBlur={()=>{
+                   if(formInputs.message===""){
+                       setInputActive({...inputActive, message:false})
+                   }
+                }}
+                className={`${inputActive.message?'inputform__activecontainer':''} inputform__messsage inputform__container`}>
+                    <label htmlFor='message'>{language==="Español"?"Mensaje":"Message"}</label>
+                    <textarea id="message" onChange={(e)=>handleChange(e)} name="message" value={formInputs.message} required/>
                 </div>
-                <div>
+                <div className='messagesend__btn'>
+                    <RiMailSendFill />
                     <input type="submit" value={language==="Español"?"Enviar":"Send"} />
                 </div>
                 

@@ -9,6 +9,7 @@ export const Navbar = ({language, changeLanguage, handleClickScroll}) => {
     const [hoverSelector, setHoverSelector] = useState()
     const [showNavMenu, setShowNavMenu] = useState(false)
 
+
     return(<>
     
     <div className='navbar__container'>

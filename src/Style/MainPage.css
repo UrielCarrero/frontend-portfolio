@@ -3,7 +3,85 @@
     negro=#0A1612
     gris=#C5C1C0
     azul=#1A2930
+    azulmedio=#09303F
 */
+
+.modal{
+    --bs-modal-bg: #1A2930 !important;
+}
+
+.modal-header {
+    background-color: #09303F;
+    color: #C5C1C0;
+    border: none !important;
+}
+
+.btn-close{
+    background-color: #C5C1C0 !important;
+    margin-right: 5% !important;
+}
+
+.modal-title{
+    font-weight: 600;
+    text-transform:uppercase;
+    padding-left: 7%;
+    font-size: 1.5rem;
+}
+
+.modal-dialog{
+    min-width: 80%;
+    margin: auto;
+    color: #C5C1C0;
+}
+
+.modal-body {
+    background: linear-gradient(0deg, #0A1612 97%, #09303F);
+}
+
+.modal__title{
+    color: #F7CE3E;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.modalscreenshot__container{
+    width: 80%;
+    padding-left: 10%;
+    padding-right: 10%;
+    background-color: transparent;
+}
+
+.modalscreenshot__container>img{
+    width: 100%;
+    height: 100%;
+}
+
+.modalinput__container{
+    display: flex;
+    justify-content: space-around;
+}
+
+.modalinput__container > button, .modalinput__container > a > button{
+    border: none;
+    background-color: transparent;
+    color: #C5C1C0;;
+    border-bottom: transparent solid 2px;
+    transition: border-bottom linear 0.25s;
+}
+
+.modalinput__container > button:hover, .modalinput__container > a > button:hover{
+    border-bottom: #C5C1C0 solid 2px;
+}
+
+.modalbtn__icon {
+    background-color: transparent;
+    color:#C5C1C0;
+    font-size: 3rem;
+}
+
+.modal__text{
+    text-align: justify !important;
+}
 
 .nav__maincontainer{
     position: fixed;
@@ -29,14 +107,90 @@
     /*background-image: linear-gradient(90deg, rgb(197,193,192) 0%,transparent 59%),repeating-linear-gradient(45deg, rgba(26,41,48, 0.27) 0px, rgba(26,41,48, 0.27) 5%,transparent 5%, transparent 10%),repeating-linear-gradient(135deg, rgba(26,41,48, 0.27) 0px, rgba(26,41,48, 0.27) 5%,transparent 5%, transparent 10%),linear-gradient(90deg, rgb(197,193,192),rgb(197,193,192));*/
     background-color: #C5C1C0;
     width: 100%;
-    padding-left: 20%;
-    padding-right: 20%;
+    height: 100vh;
     padding-top: 50px;
     border-bottom: #F7CE3E 10px solid;
+    position: relative;
 }
 
 .mainimg__container > img{
     width: 100%;
+}
+
+.mainimg__text{
+    width: 100%;
+    height: 100%;
+    font-size: 3vw;
+    font-weight: 650;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    text-transform: uppercase;
+    top: 0;
+    /*background: linear-gradient(0deg, black , transparent , black );*/
+    color: #0A1612;
+}
+
+.name{
+    font-size: 4vw;
+    transition: transform linear 0.7s, opacity linear 0.7s;
+}
+
+.show__name{
+    opacity: 1;
+    transform: scale(1);
+}
+
+.hide__name{
+    opacity: 0;
+    transform: scale(0);
+}
+
+.personal__title{
+    display: flex;
+    justify-content: center;
+    position:relative;
+}
+
+.leftside__text, .rightside__text{
+    position: relative;
+    transition: transform linear 0.7s;
+    white-space: nowrap;
+}
+
+
+.rightside__text{
+    transform: translateX(50vw);
+}
+
+.hideleftside__text{
+    transform: translateX(-50vw);
+    white-space: nowrap;
+}
+
+.hiderightside__text{
+    transform: translateX(50vw);
+}
+
+.showside__text{
+    transform: translateX(0);
+}
+
+
+
+.mainimg__text>button{
+    position: absolute;
+    top: 75vh;
+    text-transform: uppercase;
+    font-size: 2vw;
+    padding: 10px 3%;
+}
+
+.mainimg__text > div > div {
+    width: 100%;
+    text-align:center;
 }
 
 .about__container{
@@ -52,6 +206,7 @@
 
 .about__container > h3 {
     color: #F7CE3E;
+    margin-top: 15px;
 }
 
 .about__description > p{
@@ -60,11 +215,25 @@
 }
 
 .download__button{
-    background-color: transparent;
-    color: #C5C1C0;
-    font-size: 1rem;
-    
+    background-color: linear-gradient(45deg, #C5C1C0, rgb(197,193,193));
+    color: #223b47;
+    border-color: #C5C1C0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    border-radius: 4px;
 }
+
+.download__icon{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.about__personalinfo>span>h3{
+    color: #F7CE3E;
+    margin-top: 15px;
+}
+
 
 .proyect__container{
     background-image: repeating-linear-gradient(135deg, rgb(209,202,202) 0px, rgb(209,202,202) 16px,rgb(227,224,222) 16px, rgb(227,224,222) 108px,rgb(197,193,193) 108px, rgb(197,193,193) 246px);
@@ -73,6 +242,10 @@
     padding: 3%;
     padding-top: 60px;
     border-bottom: #F7CE3E 10px solid;
+}
+
+.proyect__container>h3{
+    font-weight: 620 !important;
 }
 
 .cardsproject__container{
@@ -95,13 +268,15 @@
     z-index: 90;
     top: 100px;
     right: 0;
-    background-color: rgb(75, 74, 74);
-    color: white;
+    background-color: #C5C1C0;
+    outline: #0A1612 solid 1px;
+    color: #0A1612;
     padding: 15px 50px 15px 20px;
     font-size: 500;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     transition: transform linear 0.25s;
     width: max-content !important;
+    border-radius: 5px;
 }
 
 .hide__mainpopup{
@@ -115,8 +290,8 @@
 .check__message{
     padding: 2% 2%;
     border-radius: 50%;
-    outline: green 3px solid;
-    color: green;
+    color: #C5C1C0;
+    background-color: green;;
     margin-right: 6%;
 }
 
@@ -125,7 +300,7 @@
     padding: 2% 5%;
     border-radius: 50%;
     background-color: red;
-    color: white;
+    color: #C5C1C0;
     margin-right: 6%;
 }
 
@@ -134,8 +309,8 @@
     padding: 3% 3%;
     border-radius: 50%;
     margin-left: 10px;
-    color: white;
-    background-color: black;
+    color:#C5C1C0;
+    background-color: #0A1612;
     margin-right: 6%;
     margin-top: 6px;
 }
@@ -187,8 +362,12 @@
     font-size: 1.3rem;
 }
 
+.soft__skills{
+    text-transform: capitalize;
+}
+
 .contactme__maincontainer{
-    padding-top: 10px;
+    padding-top: 50px;
     background-image: repeating-linear-gradient(135deg, rgb(6,34,51) 0px, rgb(6,34,51) 10%,rgb(9,48,63) 10%, rgb(9,48,63) 68%,rgb(10,22,18) 68%, rgb(10,22,18) 126%);
 }
 
@@ -199,19 +378,21 @@
 }
 
 @media screen and (max-width: 800px){
+
+
     .skills__containers{
         display: block;
         justify-content: space-between;
         width: 100%;
-        text-align: start;
+        text-align: center;
     }
 
     .navbar__hide{
-    opacity: 1 !important;
+        opacity: 1 !important;
     }
 
     .icon__name{
-        font-size: 2.5vw;
+        font-size: 1.2rem;
     }
 }
 
@@ -221,6 +402,69 @@
         justify-content: center;
     }
 
+    .mainimg__text>button{
+        font-size: 1.2rem;
+    }
+
+}
+
+@media screen and (max-width: 500px){
+
+    .main__popup{
+        padding: 15px 35px 15px 5px;
+    }
+
+    .close__popup{
+        margin-left: 5px;
+    }
+
+    .check__message , .error__message{
+        margin-right: 5px;
+    }
+
+    .modalbtn__icon {
+        font-size: 2.2rem;
+    }
+
+    .mainimg__text>button{
+        padding: 2% 3%;
+    }
+
+    .name{
+        font-size: 2rem;
+        padding: 0px 20px;
+    }
+
+    .personal__title{
+        font-size: 1rem;
+        display: flex;
+        padding: 0px 10px;
+    }
+
+    .maintext__symbol{
+        background-color: #0A1612;
+        max-width: 3px;
+        color: transparent;
+        margin: 0px 5px;
+    }
+
+    .leftside__text, .rightside__text{
+        white-space: normal;
+    }
+
+    .mainimg__text>button{
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    .icon__name{
+        font-size: 1rem;
+    }
+
+    .icon__container {
+        font-size: 2rem;
+        margin: 15px 13px;
+    }
 
 }
 
