@@ -5,7 +5,7 @@ import {IoDocumentAttachOutline} from 'react-icons/io5'
 import {HiCursorClick} from 'react-icons/hi'
 import {BsGithub} from 'react-icons/bs'
 
-export const ProjectCard = ({gitHubLink , link, images, language, title, description, showModal}) => {
+export const ProjectCard = ({gitHubLink , link, images, language, title, description, showModal, loginInfo}) => {
 
     const settings = {
         arrows: false,
@@ -54,10 +54,23 @@ export const ProjectCard = ({gitHubLink , link, images, language, title, descrip
                 </a> 
         </div>
         <div className='content__card'>
+
             <h3>{title}</h3>
             <div className='card__description'>
                 <p className='text__description'>{description}</p>
             </div>
+            {
+                loginInfo!==undefined?
+                <>
+                <h4>{language==="Español"?'Informacion de Ingreso:':'Log In Info:'}</h4>
+                <div>
+                    <span><b>{language==="Español"?'Usuario: ':'User: '}</b></span><span>{loginInfo.user}</span>
+                </div>
+                <div style={{marginBottom:"10px"}}>
+                    <span><b>{language==="Español"?'Contraseña: ':'Password: '}</b></span><span>{loginInfo.password}</span>
+                </div>
+                </>:<></>
+            }
         </div>
 
         </div>    

@@ -54,6 +54,11 @@
     color: #F7CE3E;
 }
 
+.content__card>h4{
+    text-align: start;
+    color: #F7CE3E;
+}
+
 
 .card__description{
     text-align: justify;

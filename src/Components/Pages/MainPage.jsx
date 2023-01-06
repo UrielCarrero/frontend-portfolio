@@ -152,7 +152,8 @@ export const MainPage = () => {
                                                                         description_en:[],
                                                                         gitHubLink:'',
                                                                         link:'',
-                                                                        stack:[]
+                                                                        stack:[],
+                                                                        loginInfo:{}
                                                                 })
  
     const toggleModal = () => {
@@ -220,13 +221,13 @@ export const MainPage = () => {
                 title:'Confusion Restaurant',
                 description_es:
                 [
-                        "Este proyecto consiste en el sitio web de un restaurante, el cual cuenta con una pagina inicial para publicar las principales promociones, una pagina para presentar los platos dentro del menu donde cada plato puede ser revisado a detalle al observar la descripción del plato junto con la correspondiente imagen y los comentarios de los clientes, siendo posible añadir nuevos comentarios a cada plato, adicionalmente cuenta con una pagina de contacto donde se presenta un formulario para enviar retroalimentación del servicio recibido y consultar la información de contacto.",
-                        "Este proyecto fue desarrollado como parte de un curso de React en coursera con la Universidad de Hong Kong, a lo largo del desarrollo de este proyecto encontré diferentes desafios debido a que el curso no manejaba librerias ni documentación actualizada de React y Javascript, por lo tanto para conseguir finalizar el proyecto decidi actualizar las librerias y filtrar la información enseñada para identificar la que no era actual para posteriormente implementar de acuerdo a lo investigado las tecnicas enseñadas."
+                        "Este proyecto consiste en el sitio web de un restaurante, el cual cuenta con una página inicial para publicar las principales promociones, una página para presentar los platos dentro del menú donde cada plato puede ser revisado a detalle al observar la descripción del plato junto con la correspondiente imagen y las calificaciones de los clientes (siendo posible añadir más calificaciones a cada plato) adicionalmente cuenta con una página de contacto donde se presenta un formulario para enviar retroalimentación del servicio recibido y consultar la información de contacto.",
+                        "Este proyecto fue desarrollado al auditar un curso de React en Coursera con la Universidad de Hong Kong, a lo largo del desarrollo de este proyecto encontré diferentes desafíos debido a que el curso no manejaba librerías ni documentación actualizada de React y JavaScript, por lo tanto para conseguir finalizar el proyecto decidí actualizar las librerías utilizadas y filtrar la información enseñada para identificar la información que no era actual y posteriormente implementar el sitio web de acuerdo a lo investigado en las técnicas enseñadas."
                 ],
                 description_en:
                 [
-                        "This project consists of the website of a restaurant, which has a home page to publish the main promotions, a page to present the dishes within the menu where each dish can be reviewed in detail by observing the description of the dish along with the corresponding image and customer comments, being possible to add new comments to each dish, additionally has a contact page where a form is presented to send feedback on the service received and consult the contact information.",
-                        "This project was developed as part of a React course with the University of Hong Kong, throughout the development of this project I found different challenges because the course did not handle libraries or updated documentation of React and Javascript, therefore to get the project completed I decided to update the libraries and filter the information taught to identify what was not current and then implement according to the researched techniques taught."
+                        "This Project consists in a restaurant website, which counts with a home page to share the main promotions, a page where the menu is displayed and it’s possible to click over any dish and check the specific information of this dish; image, ingredients, and reviews, also it’s possible to add comments to the selected dish. Further, it counts with a contact page where it has a feedback form for the restaurant and it's provided the contact information.",
+                        "This project was developed when I audited a React course in Coursera with Hong Kong University, along with the development of this project I found several challenges, due to this course being from 2018 thus it doesn`t work with up-to-date libraries or documentation, for React and JavaScript. Hence, to finish the project I decided to update the libraries and filter the taught information, to implement subsequently the website according to the research on the taught techniques."
                 ],
                 images:
                 [
@@ -246,13 +247,13 @@ export const MainPage = () => {
                 title:'RVY Store',
                 description_es:
                 [
-                        "Este proyecto consiste en un e-commerce que permite ingresar con un usuario registrado en una API o crear un nuevo usuario para comprar los productos deseados (contando con los respectivos metodos de validación de formularios), tiene con 4 paginas para las categorias de los productos (Hombre, Mujer, Joyeria y Electrodomesticos). Se puede seleccionar y revisar los productos favoritos del usuario, añadir al carrito productos y realizar un checkout de los productos a comprar, addicionalmente es posible modificar y añadir la información del usuario para la entrega de los productos.",
-                        "Este proyecto fue basado en el funcionamiento de tiendas como adidas y nike para el cual hice uso de la API fakestoreapi, fue mi primer proyecto con Typescript en el cual encontré obstaculos para implementar el consumo de la API y la arquitectura Flux con el uso de Redux ya que se presentan diferentes errores al no saber ni definir de manera adecuada los tipos utilizados en las acciones y los estados manejados dentro de la store, sin embargo logré realizar la implementación de la pagina web con Typescript gracias al estudio de la documentación y los consejos de los desarrolladores de Typescript."
+                        "Este proyecto consiste en un E-Commerce que permite ingresar con un usuario registrado en una API o crear un nuevo usuario para comprar los productos ofrecidos (contando con los respectivos métodos de validación de formularios), contiene 4 páginas que separan los productos por categoría (Hombre, Mujer, Joyería y Electrodomésticos). Se puede añadir y revisar los productos favoritos del usuario, añadir al carrito productos y realizar un checkout de los productos a comprar, adicionalmente es posible modificar y añadir la información del usuario para la entrega de los productos.",
+                        "Este proyecto fue basado en el funcionamiento de tiendas como Adidas y Nike para el cual hice uso de la API “fakestoreapi”, fue mi primer proyecto con TypeScript en el cual encontré obstáculos para implementar el consumo de la API y la arquitectura Flux con el uso de Redux ya que se presentan diferentes errores al no saber ni definir de manera adecuada los tipos utilizados en las acciones y los estados manejados dentro de la store, sin embargo logré realizar la implementación de la página web con TypeScript gracias al estudio de la documentación y los consejos de los desarrolladores en la comunidad de TypeScript."
                 ],
                 description_en:
                 [
-                        "This project consists of an e-commerce that allows to enter with a registered user in an API or create a new user to buy the desired products (with the respective methods of validation of forms), has 4 pages for the categories of products (Men, Women, Jewelry and Appliances). You can select and review the user's favorite products, add products to the cart and checkout the products to buy, additionally it is possible to modify and add the user's information for the delivery of the products.",
-                        "This project was based on the operation of stores like adidas and Nike for which I made use of the API fakestoreapi, was my first project with Typescript in which I found obstacles to implement the consumption of the API and Flux architecture with the use of Redux as different errors are presented by not knowing or properly define the types used in the actions and states handled within the store, however I managed to implement the website with Typescript thanks to the study of the documentation and advice from Typescript developers."
+                        "This Project consists in an E-Commerce that allows access with a registered user on an API or create a new user to buy the offered products (All the forms involved in the process count with their own validation functions). It has 4 different main pages to sort the products by category (Men, Women, Jewelry, and Electronics), it’s possible to add and check favorite products for the user, add to the cart products and check out the products to buy, further it allows to modify and add the user information to deliver the chosen products.",
+                        "This project was based on the functionality of online stores such as Adidas or Nike, for this project I made use of the fakestoreapi.It was my first project with Typescript where I found obstacles to implementing the API consumption and the Flux architecture with Redux, because it’s necessary to define and know the types of variables involved in the actions and states involved into the store. However, I implemented the webpage with TypeScript thanks to the documentation studying and the bits of advice from the developers in the TypeScript community."
                 ],
                 images:
                 [
@@ -271,19 +272,23 @@ export const MainPage = () => {
                         'JavaScript', 'CSS', 'HTML', 'Redux','ReactJS', 'NodeJS', 'Bootstrap'
                 ],
                 link:'https://clothes-ecommerce-d82a9.web.app/home',
-                gitHubLink:'https://github.com/UrielCarrero/RVY-Store'
+                gitHubLink:'https://github.com/UrielCarrero/RVY-Store',
+                loginInfo:{
+                        user:"don@gmail.com",
+                        password:"ewedon"
+                }
         },
         {
                 title:'Netflix Clone',
                 description_es:
                 [
-                        "En este proyecto logre realizar una copia de la interfaz de usuario de Netflix, construyendo la pagina de inicio, login y las paginas de exploración de peliculas y series. Dentro de este proyecto se cuenta con funcionalidades como el inicio de sesión, la selección de peliculas favoritas, la obtención de la descripción de cada una de las peliculas presentadas en las paginas de exploracióm y el seleccionar la pelicula a mirar siendo redirigido a otra pagina para consumir el contenido disponible.",
-                        "Este proyecto fue desarrollado con la intención de mejorar mis habilidades para construir un layout con un diseño y animaciones determinadas, ya que Netflix cuenta con diferentes elementos que manejan estilos avanzados, al implementar estos elementos conseguí aprender funciones de CSS avanzadas tales como las transiciones de estilo, las CSS queries para un diseño responsive y el uso de gradientes en las imagenes y colores de fondo en los elementos. Adicionalmente aprendi como implementar los event listener que ofrece React y funciones avanzadas que ofrecen los elementos del mismo. Esto mediante la lectura de la documentación disponible en linea."
+                        "En este proyecto logré realizar una copia de la interfaz de usuario de Netflix, construyendo la página de inicio, validación de usuario y las páginas de exploración de películas y series. Dentro de este proyecto se cuenta con funcionalidades como el inicio de sesión, la selección de películas favoritas, la obtención de la descripción de cada una de las películas presentadas en las páginas de exploración y el seleccionar la película a mirar siendo redirigido a otra página para consumir el contenido disponible.",
+                        "Este proyecto fue desarrollado con la intención de mejorar mis habilidades para construir un layout con un diseño y animaciones determinadas, ya que Netflix cuenta con diferentes elementos que manejan estilos avanzados, al implementar estos elementos conseguí aprender funciones de CSS avanzadas tales como las transiciones de estilo, las CSS queries para un diseño responsive y el uso de gradientes en las imágenes y colores de fondo en los elementos. Adicionalmente aprendí como implementar los event listener que ofrece React y funciones avanzadas que ofrecen los elementos del mismo. Esto mediante la lectura de la documentación disponible en línea."
                 ],
                 description_en:
                 [
-                        "In this project I managed to make a copy of the user interface of Netflix, building the home page, login and the exploration pages of movies and series. Within this project there are functionalities such as the login, the selection of favorite movies, obtaining the description of each of the movies presented in the exploration pages and selecting the movie to watch being redirected to another page to consume the available content.",
-                        "This project was developed with the intention of improving my skills to build a layout with a certain design and animations, since Netflix has different elements that handle advanced styles, by implementing these elements I managed to learn advanced CSS features such as style transitions, CSS queries for responsive design and the use of gradients in the images and background colors in the elements. Additionally I learned how to implement the event listener that React offers and advanced functions that React elements offer. This by reading the documentation available online."
+                        "On this project I accomplished a copy of the user interface in Netflix, building the home, user validation, and browse pages. This project has functionalities such as login in, selecting favorite movies, checking out the description of each displayed movie in the exploration pages, and redirecting to a different page to consume the available content.",
+                        "This project was developed to enhance my skills to build a layout with specific design and animations, due to Netflix counts with several elements which manage advanced styles, when I implemented these elements I learned advanced CSS functions such as style transitions, CSS media queries, and linear gradients. Further, I learned how to make use of the React event listeners and advanced functions from React elements. All of this was thanks to researching online documentation."
                 ],
                 images:
                 [
@@ -299,15 +304,19 @@ export const MainPage = () => {
                         'JavaScript', 'CSS', 'HTML', 'Redux','ReactJS', 'NodeJS', 'Bootstrap'
                 ],
                 link:'https://netflixclone-uriel.web.app',
-                gitHubLink:'https://github.com/UrielCarrero/Netflix-Clone'
+                gitHubLink:'https://github.com/UrielCarrero/Netflix-Clone',
+                loginInfo:{
+                        user:"john@gmail.com",
+                        password:"m38rmF$"
+                }
 
         }
         
     ]
 
     const personalDescription = {
-        es:"Hola soy Uriel Carrero! Ingeniero electrónico de 22 años graduado de la universidad Santo Tomas en Bogotá, apasionado por la programación y el diseño de interfaces de usuario interactivas e inteligentes. Cuento con nivel de ingles B2, el cual me ha permitido trabajar en equipos de trabajo internacionales (sin embargo tengo la meta alcanzar el nivel avanzado en los próximos años).",
-        en:"Hi, I'm Uriel Carrero! I'm a 22 year old electronic engineer graduated from Santo Tomas University in Bogota, passionate about programming and designing interactive and intelligent user interfaces. I have a B2 level of English, which has allowed me to work in international teams."
+        es:"Bienvenido! soy Uriel Carrero, ingeniero electrónico de 22 años graduado de la universidad Santo Tomás en Bogotá, apasionado por la programación y el diseño de interfaces de usuario interactivas e inteligentes. Actualmente cuento con nivel de inglés B2-Intermedio, el cual me ha permitido trabajar en equipos de trabajo internacionales (Sin embargo mi objetivo a mediano plazo es alcanzar el nivel avanzado).",
+        en:"Welcome! My name is Uriel Carrero, I’m a 22-year-old Electronic Engineer from Santo Tomás University in Bogotá, I’m passionate about programming and the design of intelligent and interactive user interfaces. I’m B2 in English and with this level, I’ve worked in international work teams. Nevertheless, my mid-term goal is to reach the advanced level."
     }
 
     const sliderSettings = {
@@ -367,6 +376,18 @@ export const MainPage = () => {
                                 </button>
                                 </a>
                         </div>
+                        {
+                                projectDetailedInfo.loginInfo!==undefined?
+                                <>
+                                <h2 className="modal__title">{language==="Español"?'Informacion de Ingreso:':'Log In Info:'}</h2>
+                                <div>
+                                <span><b>{language==="Español"?'Usuario: ':'User: '}</b></span><span>{projectDetailedInfo.loginInfo.user}</span>
+                                </div>
+                                <div style={{marginBottom:"10px"}}>
+                                <span><b>{language==="Español"?'Contraseña: ':'Password: '}</b></span><span>{projectDetailedInfo.loginInfo.password}</span>
+                                </div>
+                                </>:<></>
+                        }
                         {language==="Español"?
                                 projectDetailedInfo.description_es.map((item, index)=>{
                                         return(<>
@@ -524,11 +545,15 @@ export const MainPage = () => {
                 <div style={{width:"100%"}} className="row cardsproject__container">
                         {
                                 projects.map((item, index)=>{
-                                        let description = language==="Español"?item.description_es[1]:item.description_en[1]
+                                        let description = language==="Español"?item.description_es[0]:item.description_en[0]
 
                                         return(
                                         <span key={index} className="col-md-4 col-12 individualcard__container">
-                                                <ProjectCard gitHubLink={item.gitHubLink} link={item.link} images={item.images} showModal={showModal} language={language} title={item.title} description={description}/>
+                                                <ProjectCard gitHubLink={item.gitHubLink} 
+                                                link={item.link} images={item.images} 
+                                                showModal={showModal} language={language} 
+                                                title={item.title} description={description}
+                                                loginInfo={item.loginInfo}/>
                                         </span>
                                         )
                                 })
